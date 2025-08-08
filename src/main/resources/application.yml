@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    # Usa 'host.docker.internal' para conectar desde Docker al servicio en tu PC
+    url: jdbc:oracle:thin:@host.docker.internal:1521:orcl
+    username: System
+    password: 030903
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+    show-sql: true
+server:
+  port: 8080
